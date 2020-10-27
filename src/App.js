@@ -1,24 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import {
+  Route,
+  NavLink,
+  HashRouter,
+  Switch
+} from "react-router-dom";
+import Enter from './components/enter';
+import Header from './components/layout/header';
+import Userinfo from './components/userinfo';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <p>Let's get it crackin'</p>
-      </header>
-    </div>
-  );
+export class App extends Component {
+  render() {
+    return (
+      <HashRouter>
+        <div>
+          <Header />
+          <div className="content">
+            <Route exact path="/" component={Enter}/>
+            <Route path="/userinfo" component={Userinfo}/>
+          </div>
+        </div>
+      </HashRouter>
+    )
+  }
 }
 
-export default App;
+export default App
