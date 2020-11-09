@@ -14,7 +14,7 @@ export class HalfUnitForm extends Component {
     changeHandler = (event) => {
         let nam = event.target.name;
         let val = event.target.value;
-        this.setState({[nam]: val});
+        this.props.onHFUChange(nam, val)
        }
 
     render() {
