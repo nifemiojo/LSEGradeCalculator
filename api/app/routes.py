@@ -1,5 +1,6 @@
 from app import app
+from flask import request
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def home():
-    return "Hello, World!"
+    return f"{request.form}"
