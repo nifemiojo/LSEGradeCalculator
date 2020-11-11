@@ -1,6 +1,15 @@
 from app import app
-from flask import request
+from flask import request, jsonify
+import json
+from app.calculator import GradeCalculator, gradeCalculation
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/', methods=['GET'])
 def home():
-    return f"{request.form}"
+    if request.args:
+        Grades = dict(request.args.lists())
+        result = gradeCalculation(Grades)
+    else:
+        result = "Error"
+
+    
+    return result

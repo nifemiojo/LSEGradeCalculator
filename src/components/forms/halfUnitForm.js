@@ -23,11 +23,11 @@ export class HalfUnitForm extends Component {
                 <form>
                     <label>Number of half-units:</label><br/>
                     <label for="fyear">First-Year</label>
-                    <input type="number" id="fyear" name="firstYearHU" onChange={this.changeHandler}/>
+                    <input type="number" id="fyear" name="firstYearHU" onChange={this.changeHandler} min="0" max="3"/>
                     <label for="syear">Second-Year</label>
-                    <input type="number" id="syear" name="secondYearHU" onChange={this.changeHandler}/>
+                    <input type="number" id="syear" name="secondYearHU" onChange={this.changeHandler} min="0" max="3"/>
                     <label for="tyear">Third-Year</label>
-                    <input type="number" id="tyear" name="thirdYearHU" onChange={this.changeHandler}/><br/>
+                    <input type="number" id="tyear" name="thirdYearHU" onChange={this.changeHandler} min="0" max="3"/><br/>
                     <button type="button">
                         <Link to="/calculation">Continue</Link>
                     </button>
