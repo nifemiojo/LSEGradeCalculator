@@ -4,11 +4,6 @@ import { Link } from 'react-router-dom';
 export class HalfUnitForm extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            firstYearHU: 0,
-            secondYearHU: 0,
-            thirdYearHU: 0
-        };
     }
 
     changeHandler = (event) => {
@@ -22,11 +17,11 @@ export class HalfUnitForm extends Component {
             <div>
                 <form>
                     <label>Number of half-units:</label><br/>
-                    <label for="fyear">First-Year</label>
+                    <label htmlFor="fyear">First-Year</label>
                     <input type="number" id="fyear" name="firstYearHU" onChange={this.changeHandler} min="0" max="3"/>
-                    <label for="syear">Second-Year</label>
+                    <label htmlFor="syear">Second-Year</label>
                     <input type="number" id="syear" name="secondYearHU" onChange={this.changeHandler} min="0" max="3"/>
-                    <label for="tyear">Third-Year</label>
+                    <label htmlFor="tyear">Third-Year</label>
                     <input type="number" id="tyear" name="thirdYearHU" onChange={this.changeHandler} min="0" max="3"/><br/>
                     <button type="button">
                         <Link to="/calculation">Continue</Link>

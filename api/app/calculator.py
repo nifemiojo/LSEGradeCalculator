@@ -93,8 +93,6 @@ class GradeCalculator():
         if failGrade == 2 and enumeratedGrade != 0:
             enumeratedGrade -= 1
 
-        print(self.fullMarks)
-
         return gradeClassification[enumeratedGrade]
 
 
