@@ -5,6 +5,9 @@ export class TableForm extends Component {
     constructor(props){
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.state = {
+            result: null
+        }
     } 
 
     handleSubmit (event) {
@@ -14,8 +17,13 @@ export class TableForm extends Component {
         url.search = new URLSearchParams(formData).toString();
         fetch(url)
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => this.setState({result: data}))
             .catch(error => {console.error('Error:', error)});
+    }
+
+    componentDidUpdate() {
+        document.getElementById("mydiv").innerHTML =
+        "You result: " + this.state.result;
     }
 
     render() {
@@ -39,6 +47,7 @@ export class TableForm extends Component {
                         <input type="submit" value="Calculate"/>
                     </fieldset>
                 </form>
+                <div id="mydiv"></div>
             </div>
         )
     }

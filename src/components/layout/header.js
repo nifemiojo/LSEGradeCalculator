@@ -4,8 +4,7 @@ import lselogo from '../../images/lselogo.png'
 export default function Header() {
     return (
         <header>
-            <h1>Unofficial LSE Grade Calculator</h1>
-            <img src={lselogo} alt="logo" />
+            <img src={lselogo} alt="logo" /><h1>Unofficial LSE Grade Calculator</h1>
         </header>
     )
 }

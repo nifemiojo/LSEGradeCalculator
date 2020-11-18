@@ -3,10 +3,10 @@ import {
   Route,
   HashRouter
 } from "react-router-dom";
-import Enter from './components/enter';
 import Header from './components/layout/header';
 import UserInfo from './components/userinfo';
 import TableForm from './components/forms/tableForm';
+import './App.css'
 
 export class App extends Component {
   constructor(props) {
@@ -28,10 +28,11 @@ export class App extends Component {
     return (
       <HashRouter>
         <div>
-          <Header />
+          <header>
+            <Header />
+          </header>
           <div className="content">
-            <Route exact path="/" component={Enter}/>
-            <Route path="/userinfo" render={() => <UserInfo onHFUChange={this.handleHFUChange}/>}/>
+            <Route exact path="/" render={() => <UserInfo onHFUChange={this.handleHFUChange}/>}/>
             <Route path="/calculation" render={() => <TableForm listOfHFUs={listOfHFUs}/>}/>
           </div>
         </div>
