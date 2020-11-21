@@ -1,10 +1,18 @@
 import React from 'react';
-import lselogo from '../../images/lselogo.png'
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import ulgc_logo from '../../images/ulgc_logopack_2/ulgc_logo.png';
+import '../../App.css';
 
 export default function Header() {
     return (
-        <header>
+        <AppBar>
+            <Toolbar>
+                <img src={ulgc_logo} alt="logo" id="logo" />
+            </Toolbar>
+        </AppBar>
+        /*<header>
             <img src={lselogo} alt="logo" /><h1>Unofficial LSE Grade Calculator</h1>
-        </header>
+        </header>*/
     )
 }

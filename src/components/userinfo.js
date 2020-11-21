@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import HalfUnitForm from './forms/halfUnitForm';
-import NameModuleForm from './forms/nameModuleForm'
+import NameModuleForm from './forms/nameModuleForm';
+import '../App.css';
 
 export class UserInfo extends Component {
     constructor(props) {
@@ -22,7 +23,7 @@ export class UserInfo extends Component {
    //Need to add a conditional component that renders extra form if isHalfUnit true and else nothing
     render() {
         return (
-            <div>
+            <div id="userinfo">
                 <h3>Welcome to the LSE Grade Calculator! Please enter your information:</h3>
                 <NameModuleForm yesClick={() => this.handleYesClick()}/>
                 {this.state.isHalfUnit && <HalfUnitForm onHFUChange={this.handleHFUChange}/>}
