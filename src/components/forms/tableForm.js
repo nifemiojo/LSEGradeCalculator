@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
+import { Button, Typography } from '@material-ui/core';
 import Rows from './tableRows/rows'
+import '../../App.css';
 
 export class TableForm extends Component {
     constructor(props){
@@ -32,19 +34,19 @@ export class TableForm extends Component {
                 <h1>Please enter your results below:</h1>
                 <form onSubmit={this.handleSubmit}>
                     <fieldset>
-                        <label>First Year</label>
+                        <Typography variant="body1" align="left">First Year</Typography>
                         <table>
                             <Rows halfUnits={parseInt(this.props.listOfHFUs[0])} yearOfStudy={"fyear"}/>
                         </table>
-                        <label>Second Year</label>
+                        <Typography variant="body1" align="left">Second Year</Typography>
                         <table>
                             <Rows halfUnits={parseInt(this.props.listOfHFUs[1])} yearOfStudy={"syear"}/>
                         </table>
-                        <label>Third Year</label>
+                        <Typography variant="body1" align="left">Third Year</Typography>
                         <table>
                             <Rows halfUnits={parseInt(this.props.listOfHFUs[2])} yearOfStudy={"tyear"}/>
                         </table>
-                        <input type="submit" value="Calculate"/>
+                            <Button size="small" variant="outlined" type="submit">Calculate</Button>
                     </fieldset>
                 </form>
                 <div id="mydiv"></div>

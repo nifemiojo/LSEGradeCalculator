@@ -1,5 +1,8 @@
+import { Button, ButtonGroup, TextField } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
+import '../../App.css';
 
 export class NameModuleForm extends Component {
     constructor(props) {
@@ -15,15 +18,16 @@ export class NameModuleForm extends Component {
 
     render() {
         return (
-            <div>
+            <div className="formBlock">
                 <form>
-                    <label htmlFor="name">Name (Optional)</label>
-                    <input type="text" id="name" name="name" onChange={this.changeHandler}/><br/>
-                    <label htmlFor="modules">Did you take any half-units?</label>
-                    <input type="button" value="Yes" onClick={this.props.yesClick}/>
-                    <button type="button">
-                        <Link to="/calculation">No</Link>
-                    </button>
+                    <TextField id="standard-basic" label="Name (Optional)" fullWidth="true" name="name" onChange={this.changeHandler}/>
+                    <Typography variant="body1" align="center">Did you take any half-units?</Typography>
+                    <ButtonGroup size="small" variant="outlined">
+                        <Button onClick={this.props.yesClick}>Yes</Button>
+                        <Button>
+                            <Link to="/calculation">No</Link>
+                        </Button>
+                    </ButtonGroup>
                 </form>
             </div>
         )

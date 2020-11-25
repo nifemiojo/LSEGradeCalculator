@@ -4,8 +4,9 @@ from statistics import mean
 class GradeCalculator():
     def __init__(self, grades):
         """
-        This is an example dictionary for development purposes
+        On initialisation define the users grade in dict
         Values will be a list of flexible length depending on # of half units
+        Define a list of full marks which will be used to track the final relevant marks
         """
         self.grades = grades
         self.fullMarks = []

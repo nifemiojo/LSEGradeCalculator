@@ -3,7 +3,6 @@ import {
   Route,
   HashRouter
 } from "react-router-dom";
-import Typography from '@material-ui/core/Typography';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Header from './components/layout/header';
 import UserInfo from './components/userinfo';
@@ -22,7 +21,7 @@ const agrandir = {
 
 const theme = createMuiTheme({
   typography: {
-    fontFamily: 'Agrandir'
+    fontFamily: 'Agrandir',
   },
   overrides: {
     MuiCssBaseline: {
@@ -33,7 +32,8 @@ const theme = createMuiTheme({
   },
   palette: {
     primary: {
-      main: '#F13223',
+      //main: '#F13223',
+      main: '#ffffff'
     },
     secondary: {
       main: '#ffffff',

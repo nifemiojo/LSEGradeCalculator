@@ -1,3 +1,4 @@
+import { FilledInput, Input } from '@material-ui/core';
 import React, { Component } from 'react';
 
 export class Rows extends Component {
@@ -14,7 +15,8 @@ export class Rows extends Component {
             var normalRows = range(4).map((number) =>
             <tr key={number}>
                 <td>{number + 1}</td>
-                <td><input type="number" name={yearOfStudy} min="0" max="100"/></td>
+                <td><FilledInput name={yearOfStudy} type="number" placeholder="0" defaultValue="0"/></td>
+                {/* <td><input type="number" name={yearOfStudy} min="0" max="100"/></td> */}
             </tr>
             );
         }
@@ -22,14 +24,16 @@ export class Rows extends Component {
             normalRows = range(4 - halfUnits).map((number) =>
             <tr key={number}>
                 <td>{number + 1}</td>
-                <td><input type="number" name={yearOfStudy} min="0" max="100"/></td>
+                <td><FilledInput name={yearOfStudy} type="number" placeholder="0" defaultValue="0"/></td>
+                {/* <td><input type="number" name={yearOfStudy} min="0" max="100"/></td> */}
             </tr>
             );
 
             var hfuRows = range(halfUnits*2).map((number) =>
             <tr key={number + 5}>
                 <td>{number === 0 || number%2 === 0 ? 1 : 2}</td>
-                <td><input type="number" name={yearOfStudy} min="0" max="100"/></td>
+                <td><FilledInput name={yearOfStudy} type="number" placeholder="0" defaultValue="0"/></td>
+                {/* <td><input type="number" name={yearOfStudy} min="0" max="100"/></td> */}
             </tr>
             )
         }
