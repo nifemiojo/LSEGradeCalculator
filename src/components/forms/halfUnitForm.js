@@ -11,7 +11,7 @@ export class HalfUnitForm extends Component {
         let nam = event.target.name;
         let val = event.target.value;
         this.props.onHFUChange(nam, val)
-       }
+    }
 
     render() {
         return (
@@ -19,13 +19,13 @@ export class HalfUnitForm extends Component {
                 <form>
                     {/* TO DO: Restrict input min=0 and max=0 */}
                     <Typography variant="body1" align="center">Number of half-units:</Typography><br/>
-                    <TextField id="standard-number" name="firstYearHU" label="First-Year" type="number" placeholder="0" size="small" min="0" max="3" onChange={this.changeHandler}/>
+                    <TextField id="standard-number" name="firstYearHU" label="First-Year" type="number" placeholder="0" size="medium" defaultValue="0" inputProps={{max:3, min:0}} onChange={this.changeHandler}/>
                     {/* <label htmlFor="fyear">First-Year</label>
                     <input type="number" id="fyear" name="firstYearHU" onChange={this.changeHandler} min="0" max="3"/> */}
-                    <TextField id="standard-number" name="secondYearHU" label="Second-Year" type="number" placeholder="0" size="small" onChange={this.changeHandler}/>
+                    <TextField id="standard-number" name="secondYearHU" label="Second-Year" type="number" placeholder="0" size="medium" defaultValue="0" inputProps={{max:3, min:0}} onChange={this.changeHandler}/>
                     {/* <label htmlFor="syear">Second-Year</label>
                     <input type="number" id="syear" name="secondYearHU" onChange={this.changeHandler} min="0" max="3"/> */}
-                    <TextField id="standard-number" name="thirdYearHU" label="Third-Year" type="number" placeholder="0" size="small" onChange={this.changeHandler}/>
+                    <TextField id="standard-number" name="thirdYearHU" label="Third-Year" type="number" placeholder="0" size="medium" defaultValue="0" inputProps={{max:3, min:0}} onChange={this.changeHandler}/>
                     {/* <label htmlFor="tyear">Third-Year</label>
                     <input type="number" id="tyear" name="thirdYearHU" onChange={this.changeHandler} min="0" max="3"/><br/> */}
                     <Button size="small" variant="outlined">

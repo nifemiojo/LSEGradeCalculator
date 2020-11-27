@@ -25,7 +25,7 @@ export class TableForm extends Component {
 
     componentDidUpdate() {
         document.getElementById("mydiv").innerHTML =
-        "You result: " + this.state.result;
+        this.props.userName + " you achieved a " + this.state.result + " grade";
     }
 
     render() {

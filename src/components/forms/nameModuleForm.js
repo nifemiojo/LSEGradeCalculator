@@ -13,7 +13,7 @@ export class NameModuleForm extends Component {
     }
 
     changeHandler = (event) => {
-        this.setState({name: event.target.value});
+        this.props.onNameChange(event.target.value)
        }
 
     render() {
@@ -24,7 +24,7 @@ export class NameModuleForm extends Component {
                     <Typography variant="body1" align="center">Did you take any half-units?</Typography>
                     <ButtonGroup size="small" variant="outlined">
                         <Button onClick={this.props.yesClick}>Yes</Button>
-                        <Button>
+                        <Button onClick={this.props.noClick}>
                             <Link to="/calculation">No</Link>
                         </Button>
                     </ButtonGroup>

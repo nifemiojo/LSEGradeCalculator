@@ -8,7 +8,12 @@ export class UserInfo extends Component {
     constructor(props) {
         super(props);
         this.handleHFUChange = this.handleHFUChange.bind(this)
+        this.handleNameChange = this.handleNameChange.bind(this)
         this.state = {isHalfUnit: false};
+    }
+
+    handleNameChange(nameChange) {
+        this.props.handleNameChange(nameChange);
     }
 
     handleHFUChange(nam, val) {
@@ -21,12 +26,13 @@ export class UserInfo extends Component {
             isHalfUnit: !this.state.isHalfUnit
         });
    }
+
    //Need to add a conditional component that renders extra form if isHalfUnit true and else nothing
     render() {
         return (
             <div>
                 <Typography variant='h5' align="center">Welcome to the LSE Grade Calculator! Please enter your information:</Typography>
-                <NameModuleForm yesClick={() => this.handleYesClick()}/>
+                <NameModuleForm yesClick={() => this.handleYesClick()} noClick={this.props.handleNoClick} onNameChange={this.handleNameChange}/>
                 {this.state.isHalfUnit && <HalfUnitForm onHFUChange={this.handleHFUChange}/>}
             </div>
         )
