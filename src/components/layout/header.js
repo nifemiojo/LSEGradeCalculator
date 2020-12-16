@@ -3,13 +3,13 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import { Link } from 'react-router-dom';
 import ulgc_logo from '../../images/ulgc_logopack_2/ulgc_logo_blk.png';
-import '../../App.css';
+import './header.css';
 
-export default function Header() {
+export default function Header(props) {
     return (
-        <AppBar>
-            <Toolbar>
-                <Link to="/">
+        <AppBar position="absolute">
+            <Toolbar id="tbar">
+                <Link to="/" onClick={props.resetNumbers}>
                     <img src={ulgc_logo} alt="logo" id="logo" />
                 </Link>
             </Toolbar>

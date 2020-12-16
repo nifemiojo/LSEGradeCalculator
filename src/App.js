@@ -9,7 +9,7 @@ import UserInfo from './components/userinfo';
 import TableForm from './components/forms/tableForm';
 import Footer from './components/footer';
 import './App.css';
-import { CssBaseline } from '@material-ui/core';
+import { Container, CssBaseline, Grid } from '@material-ui/core';
 import Agrandir from './fonts/Agrandir/Agrandir-Regular.woff'
 
 const agrandir = {
@@ -39,6 +39,15 @@ const theme = createMuiTheme({
     secondary: {
       main: '#ffffff',
     },
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 400,
+      md: 960,
+      lg: 1280,
+      xl: 1920,
+    }
   }
 });
 
@@ -47,6 +56,7 @@ export class App extends Component {
     super(props);
     this.handleHFUChange = this.handleHFUChange.bind(this);
     this.handleNameChange = this.handleNameChange.bind(this);
+
     this.state = {
       name: '',
       firstYearHU: 0,
@@ -64,7 +74,6 @@ export class App extends Component {
   }
 
   handleNoClick() {
-    console.log("hit no");
     this.setState({
       firstYearHU: 0,
       secondYearHU: 0,
@@ -72,26 +81,29 @@ export class App extends Component {
     });
   }
 
-
   render() {
     const listOfHFUs = [this.state.firstYearHU, this.state.secondYearHU, this.state.thirdYearHU]
     return (
       <HashRouter>
-        <div className="page-container">
-          <div className="content-wrap">
-            <ThemeProvider theme={theme}>
-              <CssBaseline />
-              <header className="App-header">
-                <Header />
-              </header>
-              <div className="content">
-                <Route exact path="/" render={() => <UserInfo onHFUChange={this.handleHFUChange} handleNameChange={this.handleNameChange} handleNoClick={() => this.handleNoClick()}/>}/>
-                <Route path="/calculation" render={() => <TableForm listOfHFUs={listOfHFUs} userName={this.state.name}/>}/>
-              </div>
-            </ThemeProvider>
-          </div>
-          <Footer/>
-        </div>
+        <Container maxWidth="lg">
+          <Grid container spacing={0} direction="column" justify="flex-end" alignItems="stretch"> {/*min-height:105vh*/}
+            <Grid item xs={12} id="topGrid"> {/*min-height:93vh*/}
+              <ThemeProvider theme={theme}>
+                <CssBaseline />
+                <header className="App-header">
+                  <Header resetNumbers={() => this.handleNoClick()}/>
+                </header>
+                <div className="content">
+                  <Route exact path="/" render={() => <UserInfo onHFUChange={this.handleHFUChange} handleNameChange={this.handleNameChange} handleNoClick={() => this.handleNoClick()}/>}/>
+                  <Route path="/calculation" render={() => <TableForm listOfHFUs={listOfHFUs} userName={this.state.name}/>}/>
+                </div>
+              </ThemeProvider>
+            </Grid>
+            <Grid item xs={12} id="bottomGrid">
+              <Footer/>
+            </Grid>
+          </Grid>
+        </Container>
       </HashRouter>
     )
   }

@@ -11,7 +11,6 @@ class GradeCalculator():
         self.grades = grades
         self.fullMarks = []
 
-
     def handleHalfUnits(self):
         """
         Function identifies half units and takes their average
@@ -90,7 +89,8 @@ class GradeCalculator():
             enumeratedGrade = 1
         else:
             enumeratedGrade = 0
-    
+
+        #Penalty Rules needs update: Fail Grades needs to count half units and all first year papers, also fail (non-graduation) classification
         if failGrade == 2 and enumeratedGrade != 0:
             enumeratedGrade -= 1
 

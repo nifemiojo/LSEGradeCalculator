@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Button, Typography } from '@material-ui/core';
+import { Button, Grid, Typography } from '@material-ui/core';
 import Rows from './tableRows/rows'
-import '../../App.css';
+import './tableForm.css';
 
 export class TableForm extends Component {
     constructor(props){
@@ -25,30 +25,46 @@ export class TableForm extends Component {
 
     componentDidUpdate() {
         document.getElementById("mydiv").innerHTML =
-        this.props.userName + " you achieved a " + this.state.result + " grade";
+        this.props.userName + "You achieved a " + this.state.result + " grade";
     }
 
     render() {
         return (
             <div>
-                <h1>Please enter your results below:</h1>
-                <form onSubmit={this.handleSubmit}>
-                    <fieldset>
-                        <Typography variant="body1" align="left">First Year</Typography>
-                        <table>
-                            <Rows halfUnits={parseInt(this.props.listOfHFUs[0])} yearOfStudy={"fyear"}/>
-                        </table>
-                        <Typography variant="body1" align="left">Second Year</Typography>
-                        <table>
-                            <Rows halfUnits={parseInt(this.props.listOfHFUs[1])} yearOfStudy={"syear"}/>
-                        </table>
-                        <Typography variant="body1" align="left">Third Year</Typography>
-                        <table>
-                            <Rows halfUnits={parseInt(this.props.listOfHFUs[2])} yearOfStudy={"tyear"}/>
-                        </table>
-                            <Button size="small" variant="outlined" type="submit">Calculate</Button>
-                    </fieldset>
-                </form>
+                <Typography variant="h5">Please enter your results below:</Typography>
+                    <form onSubmit={this.handleSubmit} id="results-form">
+                        <Grid container direction="column" alignItems="center" justify="center" spacing={2}>
+                            <Grid container item xs={12} justify="space-evenly" alignItems="flex-start" spacing={0}>
+                                <Grid container direction="column" item xs={3} sm={4} alignItems="center" justify="center" spacing={2}>
+                                    <Grid item xs={12}>
+                                        <Typography variant="body1">First Year</Typography>
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <Rows halfUnits={parseInt(this.props.listOfHFUs[0])} yearOfStudy={"fyear"}/>
+                                    </Grid>
+                                </Grid>
+                                <Grid container direction="column" item xs={3} sm={4} alignItems="center" justify="center" spacing={2}>
+                                    <Grid item xs={12}>
+                                        <Typography variant="body1">Second Year</Typography>
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <Rows halfUnits={parseInt(this.props.listOfHFUs[1])} yearOfStudy={"syear"}/>
+                                    </Grid>
+                                </Grid>
+                                <Grid container direction="column" item xs={3} sm={4} alignItems="center" justify="center" spacing={2}>
+                                    <Grid item xs={12}>
+                                        <Typography variant="body1">Third Year</Typography>
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <Rows halfUnits={parseInt(this.props.listOfHFUs[2])} yearOfStudy={"tyear"}/>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                            <Grid item xs={4}>
+                                <Button size="small" variant="outlined" type="submit">Calculate</Button>
+                            </Grid>
+                        </Grid>
+                    </form>
                 <div id="mydiv"></div>
             </div>
         )

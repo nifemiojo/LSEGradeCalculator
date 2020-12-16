@@ -1,4 +1,4 @@
-import { FilledInput, Input } from '@material-ui/core';
+import { FilledInput, Grid, Input } from '@material-ui/core';
 import React, { Component } from 'react';
 
 export class Rows extends Component {
@@ -38,11 +38,15 @@ export class Rows extends Component {
             )
         }
         return (
-            <tbody>
-                {normalRows}
-                {halfUnits !== 0 ? hfuLabel : null}
-                {hfuRows}
-            </tbody>
+            <Grid container direction="column" spacing={3} alignItems="center">
+                <Grid item xs={12}>
+                    {normalRows}
+                </Grid>
+                <Grid item xs={12}>
+                    {halfUnits !== 0 ? hfuLabel : null}
+                    {hfuRows}
+                </Grid>
+            </Grid>
         );
     }
 

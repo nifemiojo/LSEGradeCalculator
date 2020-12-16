@@ -1,0 +1,11 @@
+/* .main-footer {
+    text-align: center;
+} */
+
+#leftGrid {
+    text-align: left;
+}
+
+#rightGrid {
+    text-align: end;
+}
