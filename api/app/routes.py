@@ -2,9 +2,9 @@ from api.app import app
 from flask import request, jsonify
 import json
 from api.app.calculator import GradeCalculator, gradeCalculation
-#from flask_cors import CORS
+from flask_cors import CORS
 
-#cors = CORS(app, resources={r"/api/calculate": {"origins": "http://localhost:3000"}})
+cors = CORS(app, resources={r"/api/calculate": {"origins": "http://localhost:3000"}})
 
 @app.route('/')
 def index():
