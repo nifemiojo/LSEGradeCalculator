@@ -14,7 +14,7 @@ export class TableForm extends Component {
 
     handleSubmit (event) {
         event.preventDefault();
-        const url = new URL("http://127.0.0.1:5000/");
+        const url = new URL("http://127.0.0.1:5000/api/calculate");
         var formData = new FormData(event.target);
         url.search = new URLSearchParams(formData).toString();
         fetch(url)
