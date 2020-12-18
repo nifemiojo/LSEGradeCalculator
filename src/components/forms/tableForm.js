@@ -14,7 +14,7 @@ export class TableForm extends Component {
 
     handleSubmit (event) {
         event.preventDefault();
-        const url = new URL("api/calculate");
+        const url = new URL("https://lsegradecalculator.herokuapp.com/api/calculate");
         var formData = new FormData(event.target);
         url.search = new URLSearchParams(formData).toString();
         fetch(url)
