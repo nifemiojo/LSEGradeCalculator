@@ -1,10 +1,7 @@
-import { FilledInput, Grid, Input } from '@material-ui/core';
+import { FilledInput, Grid } from '@material-ui/core';
 import React, { Component } from 'react';
 
 export class Rows extends Component {
-    constructor(props){
-        super(props);
-    }
 
     render () {
         const range = n => [...Array(n).keys()]

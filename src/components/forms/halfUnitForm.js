@@ -3,9 +3,6 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 
 export class HalfUnitForm extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     changeHandler = (event) => {
         let nam = event.target.name;

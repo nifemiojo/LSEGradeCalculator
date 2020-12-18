@@ -15,6 +15,7 @@ function Footer() {
                     <a 
                     href="https://info.lse.ac.uk/staff/divisions/academic-registrars-division/Teaching-Quality-Assurance-and-Review-Office/Assets/Documents/Calendar/BA-BSc-Three-Year-scheme-for-students-from-2018.19.pdf" 
                     target="_blank"
+                    rel="noopener noreferrer"
                     >
                         Latest LSE Grade Classification Scheme
                     </a>

@@ -20,19 +20,6 @@
     text-align: center;
 }
 
-/* .MuiTypography-body1 {
-    padding-top: 20px;
-} */
-
 a {
     text-decoration: none; 
 }
-
-/* @font-face {
-    font-family: 'Agrandir';
-    src: local('Agrandir') url(./fonts/Agrandir/Agrandir-Regular.woff) format('woff');
-} */
-
-/* #userinfo {
-    font-family: Agrandir;
-} */
