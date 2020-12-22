@@ -25,7 +25,7 @@ export class TableForm extends Component {
 
     componentDidUpdate() {
         document.getElementById("mydiv").innerHTML =
-        this.props.userName + "You achieved a " + this.state.result + " grade";
+        <Typography variant="h2" align="center">{this.props.userName + "You achieved a " + this.state.result + " grade"}</Typography>
     }
 
     render() {

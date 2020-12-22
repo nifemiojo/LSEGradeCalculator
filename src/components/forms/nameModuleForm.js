@@ -20,8 +20,8 @@ export class NameModuleForm extends Component {
         return (
             <div className="formBlock">
                 <form>
-                    <TextField id="standard-basic" label="Name (Optional)" fullWidth="true" name="name" onChange={this.changeHandler}/>
-                    <Typography variant="body1" align="center">Did you take any half-units?</Typography>
+                    <TextField id="standard-basic" label="Name (Optional)" fullWidth="true" variant="filled" name="name" onChange={this.changeHandler}/>
+                    <Typography variant="body1" align="center" id="Text1">Did you take any half-units?</Typography>
                     <ButtonGroup size="small" variant="outlined">
                         <Button onClick={this.props.yesClick}>Yes</Button>
                         <Button onClick={this.props.noClick}>
