@@ -24,8 +24,7 @@ export class TableForm extends Component {
     }
 
     componentDidUpdate() {
-        document.getElementById("mydiv").innerHTML =
-        <Typography variant="h2" align="center">{this.props.userName + "You achieved a " + this.state.result + " grade"}</Typography>
+        document.getElementById("displayGrade").innerHTML = this.props.userName + "You achieved a " + this.state.result + " grade"
     }
 
     render() {
@@ -65,7 +64,9 @@ export class TableForm extends Component {
                             </Grid>
                         </Grid>
                     </form>
-                <div id="mydiv"></div>
+                <div id="mydiv">
+                    <Typography variant="h2" align="center" id="displayGrade"></Typography>
+                </div>
             </div>
         )
     }
