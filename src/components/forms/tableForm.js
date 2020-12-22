@@ -24,7 +24,10 @@ export class TableForm extends Component {
     }
 
     componentDidUpdate() {
-        document.getElementById("displayGrade").innerHTML = this.props.userName + "You achieved a " + this.state.result + " grade"
+        if (this.props.userName)
+            document.getElementById("displayGrade").innerHTML = this.props.userName + ", you achieved a " + this.state.result + " grade"
+        else
+            document.getElementById("displayGrade").innerHTML = "You achieved a " + this.state.result + " grade"
     }
 
     render() {
@@ -65,7 +68,7 @@ export class TableForm extends Component {
                         </Grid>
                     </form>
                 <div id="mydiv">
-                    <Typography variant="h3" align="center" id="displayGrade"></Typography>
+                    <Typography variant="h5" align="center" id="displayGrade"></Typography>
                 </div>
             </div>
         )
