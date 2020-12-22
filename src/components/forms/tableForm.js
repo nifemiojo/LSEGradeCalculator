@@ -65,7 +65,7 @@ export class TableForm extends Component {
                         </Grid>
                     </form>
                 <div id="mydiv">
-                    <Typography variant="h2" align="center" id="displayGrade"></Typography>
+                    <Typography variant="h3" align="center" id="displayGrade"></Typography>
                 </div>
             </div>
         )
