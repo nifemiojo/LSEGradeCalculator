@@ -28,3 +28,7 @@ yarn-error.log*
 notes.txt
 
 *.ipynb
+
+server.csr
+server.key
+server.pass.key
