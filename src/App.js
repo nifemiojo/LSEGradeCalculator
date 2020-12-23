@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {
-  Route,
-  HashRouter
+  BrowserRouter,
+  Route
 } from "react-router-dom";
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Header from './components/layout/header';
@@ -84,7 +84,7 @@ export class App extends Component {
   render() {
     const listOfHFUs = [this.state.firstYearHU, this.state.secondYearHU, this.state.thirdYearHU]
     return (
-      <HashRouter>
+      <BrowserRouter>
         <Container maxWidth="lg">
           <Grid container spacing={1} direction="column" justify="flex-end" alignItems="stretch"> {/*min-height:105vh*/}
             <Grid item xs={12} id="topGrid"> {/*min-height:93vh*/}
@@ -104,7 +104,7 @@ export class App extends Component {
             </Grid>
           </Grid>
         </Container>
-      </HashRouter>
+      </BrowserRouter>
     )
   }
 }
