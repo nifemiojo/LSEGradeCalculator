@@ -86,7 +86,7 @@ export class App extends Component {
     return (
       <HashRouter>
         <Container maxWidth="lg">
-          <Grid container spacing={0} direction="column" justify="flex-end" alignItems="stretch"> {/*min-height:105vh*/}
+          <Grid container spacing={1} direction="column" justify="flex-end" alignItems="stretch"> {/*min-height:105vh*/}
             <Grid item xs={12} id="topGrid"> {/*min-height:93vh*/}
               <ThemeProvider theme={theme}>
                 <CssBaseline />

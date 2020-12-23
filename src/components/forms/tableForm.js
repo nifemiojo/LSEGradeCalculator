@@ -65,11 +65,11 @@ export class TableForm extends Component {
                             <Grid item xs={4}>
                                 <Button size="small" variant="outlined" type="submit">Calculate</Button>
                             </Grid>
+                            <Grid item xs={12}>
+                                <Typography variant="h5" align="center" id="displayGrade">Grade</Typography>
+                            </Grid>
                         </Grid>
                     </form>
-                <div id="mydiv">
-                    <Typography variant="h5" align="center" id="displayGrade"></Typography>
-                </div>
             </div>
         )
     }
