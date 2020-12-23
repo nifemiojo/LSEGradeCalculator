@@ -66,7 +66,7 @@ export class TableForm extends Component {
                                 <Button size="small" variant="outlined" type="submit">Calculate</Button>
                             </Grid>
                             <Grid item xs={12}>
-                                <Typography variant="h5" align="center" id="displayGrade">Grade</Typography>
+                                <Typography variant="h5" align="center" id="displayGrade"></Typography>
                             </Grid>
                         </Grid>
                     </form>
