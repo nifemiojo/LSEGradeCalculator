@@ -31,4 +31,5 @@ notes.txt
 
 server.csr
 server.key
+server.crt
 server.pass.key
