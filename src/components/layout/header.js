@@ -10,7 +10,7 @@ export default function Header(props) {
         <AppBar position="absolute">
             <Toolbar id="tbar">
                 <Link to="/" onClick={props.resetNumbers}>
-                    <img src={ulgc_logo} alt="logo" id="logo" />
+                    <img src={ulgc_logo} alt="LSE Grade Calculator Logo" id="logo" />
                 </Link>
             </Toolbar>
         </AppBar>
