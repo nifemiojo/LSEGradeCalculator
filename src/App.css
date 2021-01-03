@@ -3,7 +3,7 @@
 }
 
 .App-header {
-    margin-top: 150px;
+    margin-top: 130px;
 }
 
 #logo {
@@ -14,7 +14,7 @@
 }
 
 .formBlock {
-    margin-top: 20px;
+    margin-top: 15px;
     display: flex;
     justify-content: center;
     text-align: center;

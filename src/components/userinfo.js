@@ -30,7 +30,7 @@ export class UserInfo extends Component {
    //Need to add a conditional component that renders extra form if isHalfUnit true and else nothing
     render() {
         return (
-            <div>
+            <div id="userInfo">
                 <Typography variant='h5' align="center">Please enter your information:</Typography>
                 <NameModuleForm yesClick={() => this.handleYesClick()} noClick={this.props.handleNoClick} onNameChange={this.handleNameChange}/>
                 {this.state.isHalfUnit && <HalfUnitForm onHFUChange={this.handleHFUChange}/>}
