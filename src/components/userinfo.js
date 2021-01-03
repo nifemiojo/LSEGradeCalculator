@@ -31,7 +31,7 @@ export class UserInfo extends Component {
     render() {
         return (
             <div id="userInfo">
-                <Typography variant='h5' align="center">Please enter your information:</Typography>
+                <Typography variant='h5' align="center">Please enter your details</Typography>
                 <NameModuleForm yesClick={() => this.handleYesClick()} noClick={this.props.handleNoClick} onNameChange={this.handleNameChange}/>
                 {this.state.isHalfUnit && <HalfUnitForm onHFUChange={this.handleHFUChange}/>}
             </div>

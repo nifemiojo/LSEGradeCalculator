@@ -87,16 +87,18 @@ export class App extends Component {
       <BrowserRouter>
         <Container maxWidth="lg">
           <Grid container spacing={1} direction="column" justify="flex-end" alignItems="stretch"> {/*min-height:105vh*/}
-            <Grid item xs={12} id="topGrid"> {/*min-height:93vh*/}
+            <Grid container  direction="column" justify="center" alignItems="center" item xs={12} id="topGrid"> {/*min-height:93vh*/}
               <ThemeProvider theme={theme}>
                 <CssBaseline />
-                <header className="App-header">
-                  <Header resetNumbers={() => this.handleNoClick()}/>
-                </header>
-                <div className="content">
+                <Grid item>
+                  <header className="App-header">
+                    <Header resetNumbers={() => this.handleNoClick()}/>
+                  </header>
+                </Grid>
+                <Grid item>
                   <Route exact path="/" render={() => <UserInfo onHFUChange={this.handleHFUChange} handleNameChange={this.handleNameChange} handleNoClick={() => this.handleNoClick()}/>}/>
                   <Route path="/calculation" render={() => <TableForm listOfHFUs={listOfHFUs} userName={this.state.name}/>}/>
-                </div>
+                </Grid>
               </ThemeProvider>
             </Grid>
             <Grid item xs={12} id="bottomGrid">
