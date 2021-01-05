@@ -55,7 +55,7 @@ class GradeCalculator():
         Function returns the users grade classification as per LSE's Guidance
         """
         #Define Classification
-        gradeClassification = ["a Pass", "a Third class", "a Lower second class", "an Upper second class", "a First-class" ]
+        gradeClassification = ["a pass", "a third class", "a lower second class", "an upper second class", "a first class" ]
 
         #Initialise counter for each grade, enumeration variable
         firstClassGrade = upperSecondClassGrade = lowerSecondClassGrade = thirdClassGrade = failGrade = 0
