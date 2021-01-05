@@ -25,9 +25,9 @@ export class TableForm extends Component {
 
     componentDidUpdate() {
         if (this.props.userName)
-            document.getElementById("displayGrade").innerHTML = this.props.userName + ", you achieved a " + this.state.result + " grade"
+            document.getElementById("displayGrade").innerHTML = this.props.userName + ", you achieved " + this.state.result + " grade"
         else
-            document.getElementById("displayGrade").innerHTML = "You achieved a " + this.state.result + " grade"
+            document.getElementById("displayGrade").innerHTML = "You achieved " + this.state.result + " grade"
     }
 
     render() {
