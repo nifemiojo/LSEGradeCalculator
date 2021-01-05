@@ -33,7 +33,7 @@ export class TableForm extends Component {
     render() {
         return (
             <div>
-                <Typography variant="h5">Please enter your results below:</Typography>
+                <Typography variant="h5">Please enter your full results below:</Typography>
                     <form onSubmit={this.handleSubmit} id="results-form">
                         <Grid container direction="column" alignItems="center" justify="center" spacing={2}>
                             <Grid container item xs={12} justify="space-evenly" alignItems="flex-start" spacing={0}>
