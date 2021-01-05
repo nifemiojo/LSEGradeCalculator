@@ -11,5 +11,8 @@ Mobile-First Responsive UI Design
 ## Website Link
 [LSE Grade Calculator](https://lsegradecalculator.herokuapp.com/)
 
+## Code
+Main python file located in `api/app/calculator.py`
+
 ## Author
 Femi Ojo
