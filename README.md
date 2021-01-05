@@ -9,7 +9,7 @@ This website is built using the Material UI and react.js libraries for the UI an
 Mobile-First Responsive UI Design
 
 ## Website Link
-[LSE Grade Calculator](https://lsegradecalculator.herokuapp.com/)
+[LSE Grade Calculator](https://www.lsegradecalculator.com/)
 
 ## Code
 Main python file located in `api/app/calculator.py`
