@@ -1,5 +1,6 @@
 
 from statistics import mean
+from math import ceil
 
 class GradeCalculator():
     def __init__(self, grades):
@@ -44,8 +45,9 @@ class GradeCalculator():
         fYearGrades = self.grades["fyear"]
         fYearGrades.sort()
         fYearGrades = fYearGrades[2:]
+        
 
-        firstYearAverage = mean(fYearGrades)
+        firstYearAverage = ceil(mean(fYearGrades))
 
         return firstYearAverage
 
